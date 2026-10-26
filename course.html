@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script src="theme.js"></script>
+<title>الكورس | Monalingo Academy</title>
+<meta name="description" content="تفاصيل الكورس ودروسه على Monalingo Academy — شاهد الفيديوهات، حلّ اختبارات الدروس وحمّل الملازم.">
+<meta name="theme-color" content="#A680EA">
+<link rel="icon" type="image/webp" href="monalingo-mark.webp">
+<link rel="preconnect" href="https://firestore.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="student-courses.css">
+<link rel="stylesheet" href="mobile-header.css">
+<link rel="stylesheet" href="site-footer.css">
+<link rel="stylesheet" href="dev-signature.css">
+<style id="dh-style">
+.pg .hx .dhm,.pg .hx .dh-cta,.pg .dsb,.pg .dsb-ov{display:none}
+@media(min-width:721px){
+.pg .hx .hd{flex-wrap:nowrap;gap:12px;padding:10px 24px;min-height:72px}
+.pg .hx .brand{order:1;font-size:22px}
+.pg .hx .nav{display:none}
+.pg .hx .he{order:2;margin-inline-start:auto}
+.pg .hx .tg{margin-inline-start:0}
+.pg .hx .hs{order:3;display:flex;flex:none;width:auto;margin:0;padding:0;gap:0}
+.pg .hx .hs a{flex:none}
+.pg .hx .hs>.hl{min-height:44px;padding:8px 16px;border:1.5px solid var(--bd);border-radius:999px;background:var(--card)}
+.pg .hx .dh-cta{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 8px 0 18px;border-radius:12px;background:linear-gradient(135deg,var(--btn) 55%,var(--btnh));color:#fff;font:700 15px/1 'Cairo',Tahoma,sans-serif;text-decoration:none;box-shadow:0 12px 22px -14px color-mix(in srgb,var(--btn) 85%,#000),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .2s,box-shadow .2s}
+.pg .hx .dh-cta:hover{transform:translateY(-1px);box-shadow:0 16px 24px -14px color-mix(in srgb,var(--btn) 85%,#000),inset 0 1px 0 rgba(255,255,255,.18)}
+.pg .hx .dh-ic{width:32px;height:32px;border-radius:9px;background:#E7AA53;display:grid;place-items:center;flex:none}
+.pg .hx .dh-ic svg{width:16px;height:16px;fill:none;stroke:#1B1D46;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.pg .hx .hs .dh-cta~.hl,.pg .hx .hs .dh-cta~.hb{display:none}
+.pg .hx .dhm{order:4;display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:5px;width:46px;height:46px;padding:0 12px;border:1.5px solid var(--bd);border-radius:14px;background:var(--card);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .2s}
+.pg .hx .dhm span{display:block;height:2.5px;border-radius:2px;background:var(--ink);transition:width .25s}
+.pg .hx .dhm span:nth-child(1),.pg .hx .dhm span:nth-child(3){width:20px}
+.pg .hx .dhm span:nth-child(2){width:13px}
+.pg .hx .dhm:hover{border-color:var(--amb)}
+.pg .hx .dhm:hover span:nth-child(2){width:20px}
+.pg .hx .dhm:focus-visible{outline:3px solid var(--den);outline-offset:3px}
+.pg .dsb-ov{display:block;position:fixed;inset:0;z-index:190;background:rgba(20,23,63,.5);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.pg .dsb-ov.is-open{opacity:1;visibility:visible;transition:opacity .3s}
+.pg .dsb{display:flex;flex-direction:column;position:fixed;top:0;bottom:0;left:0;z-index:200;width:340px;max-width:90vw;background:var(--card);color:var(--ink);box-shadow:30px 0 60px -30px rgba(0,0,0,.6);transform:translateX(-104%);visibility:hidden;transition:transform .3s cubic-bezier(.2,.7,.2,1),visibility 0s .3s}
+.pg .dsb.is-open{transform:none;visibility:visible;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.pg .dsb-top{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;background:linear-gradient(135deg,#1B1D46 0 40%,#8483EA);color:#fff}
+.pg .dsb-t{display:flex;align-items:center;gap:12px;font:700 18px/1.3 'Cairo',Tahoma,sans-serif}
+.pg .dsb-t small{display:block;font:500 12px/1.4 'Cairo',Tahoma,sans-serif;color:#D9CBF5}
+.pg .dsb-mk{width:38px;height:38px;border-radius:11px;background:#E7AA53;color:#1B1D46;display:grid;place-items:center;font:800 20px/1 'Cairo',sans-serif}
+.pg .dsb-x{width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s}
+.pg .dsb-x:hover{background:#E7AA53;color:#1B1D46}
+.pg .dsb-x svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round}
+.pg .dsb-nav{flex:1;overflow-y:auto;padding:14px 14px 8px;display:flex;flex-direction:column;gap:4px}
+.pg .dsb-nav a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:0 16px;border-radius:14px;color:var(--ink);font:600 17px/1.3 'Cairo',Tahoma,sans-serif;text-decoration:none;transition:background .2s,color .2s}
+.pg .dsb-nav a:hover,.pg .dsb-nav a:focus-visible{background:var(--sky);color:var(--den)}
+.pg .dsb-nav a[href="exam.html"]{background:color-mix(in srgb,var(--amb) 24%,transparent)}
+.pg .dsb-nav svg{width:18px;height:18px;flex:none;fill:none;stroke:var(--den);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pg .dsb-ft{padding:14px 20px 22px;border-top:1px solid var(--bd)}
+.pg .dsb-login{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px;border-radius:999px;border:1.5px solid var(--den);color:var(--den);font:700 15.5px 'Cairo',Tahoma,sans-serif;text-decoration:none;transition:background .2s,color .2s}
+.pg .dsb-login:hover{background:var(--den);color:var(--card)}
+.pg .dsb-login svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+html.dsb-lock{overflow:hidden}
+}
+@media(prefers-reduced-motion:reduce){.pg .dsb,.pg .dsb-ov,.pg .hx .dh-cta,.pg .hx .dhm span{transition:none!important}}
+</style>
+<style id="mn-brand">
+/* =====================================================================================
+   MONALINGO ACADEMY — الطبقة المشتركة (الهيدر، القائمة الجانبية، الفوتر، الحالات)
+   تُحمَّل بعد ملفات CSS المشتركة (student-courses / mobile-header / site-footer / dev-signature)
+   فتضبط الألوان والهيدر والفوتر وبطاقات الكورسات بهوية index.html دون تعديل تلك الملفات،
+   وبذلك لا تتأثر بقية صفحات المنصة (course / lectures / test / profile ...) إلى أن يحين دورها.
+   الألوان: بنفسجي #A680EA / #A680EA · نيلي #1B1D46 · أوركيد #BBA2E5 · ليلكي #F4EEFF · ذهبي #E7AA53
+   ===================================================================================== */
+.pg{--lat:'Montserrat','Cairo',Tahoma,sans-serif;--amb:#E7AA53;--bg:#FDFBFF;--card:#fff;--bd:#E7DDF8;--ink:#1B1D46;--den:#7A54D6;--sky:#F4EEFF;--mut:#5A5F8D;--dk:#6A4DC9;--ft:#2D2C7A;--btn:#A680EA;--btnh:#9468DE;--cta:#A680EA;--on-amb:#1B1D46;--vio:#7A54D6;--vio2:#A680EA;--orc:#BBA2E5;--lil:#D7BEF5;--ind:#8483EA;--azure:#3FA6F2;--grad:linear-gradient(135deg,#8483EA 0%,#A680EA 55%,#BBA2E5 100%);--tg-track:#E9DDFF;--tg-knob:#fff;--tg-ic:#7A54D6;--shd:49,53,156}
+html[data-theme=dark] .pg{--amb:#E7AA53;--bg:#14173F;--card:#1E2254;--bd:#383D8C;--ink:#F5EFFF;--den:#BBA2E5;--sky:#252A66;--mut:#BEAEE0;--dk:#262B6B;--ft:#0F1236;--btn:#A680EA;--btnh:#9468DE;--cta:#A680EA;--vio:#7A54D6;--vio2:#B79BEF;--orc:#C3A9EE;--grad:linear-gradient(135deg,#A680EA 0%,#A680EA 55%,#C3A9EE 100%);--tg-track:#343A85;--tg-knob:#A680EA;--tg-ic:#fff;--shd:0,0,0}
+::selection{background:#CDB8F2;color:#1B1D46}
+
+/* ---------- الهيدر: شعار الطائر + اسم Monalingo (نفس index.html) ---------- */
+.pg .hx .brand{gap:11px;color:var(--ink)}
+.brand__mk{display:block;flex:none;width:2.45em;aspect-ratio:300/246;background:url(monalingo-mark.webp) center/contain no-repeat;filter:drop-shadow(0 5px 10px rgba(166,128,234,.28))}
+.brand__name{display:flex;flex-direction:column;gap:.24em;line-height:1;direction:ltr;text-align:start}
+.brand__name b{font:800 1em/1 var(--lat);letter-spacing:.05em;color:var(--ink)}
+.brand__name small{font:600 .4em/1 var(--lat);letter-spacing:.15em;color:var(--den);white-space:nowrap}
+html[data-theme=dark] .brand__mk{filter:drop-shadow(0 0 12px rgba(187,162,229,.6))}
+@media(max-width:720px){.brand__name small{display:none}.brand__name b{letter-spacing:.04em}}
+@media(min-width:721px){.pg .hx .ac{height:3px;background:linear-gradient(90deg,#8483EA 0,#A680EA 42%,#C3A9EE 78%,#E7AA53 100%)}}
+:is(.pg,body) .hx .hxp i{background:linear-gradient(270deg,#8483EA,#A680EA 55%,#E7AA53)}
+.hb{border-color:#E7AA53;color:#1B1D46}
+.hx .hb{color:#1B1D46}
+.hb:hover{background:#F0C07A}
+.tg .i{color:#1B1D46}
+.tg::before{box-shadow:0 1px 3px rgba(27,29,70,.25)}
+/* مفتاح الوضع: مسار ليلكي وكرة بيضاء (نهاري) ← مسار نيلي وكرة بنفسجية (ليلي) */
+.pg .tg{background:var(--tg-track);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--vio) 30%,transparent)}
+.pg .tg::before{background:var(--tg-knob);box-shadow:0 2px 6px rgba(var(--shd),.4)}
+.pg .tg .i{color:var(--tg-ic)}
+.pg .tg:hover{box-shadow:inset 0 0 0 1.5px var(--vio)}
+.pg .hx .dh-ic{background:var(--amb)}
+.pg .hx .dh-ic svg{stroke:#1B1D46}
+.pg .hx .hs>.hl:hover{border-color:var(--vio)}
+/* الصفحة الحالية في التنقل */
+.pg .hx .nav a[aria-current=page]{background:color-mix(in srgb,var(--vio) 13%,transparent);color:var(--den);font-weight:700}
+/* تبويب «الاختبارات»: حبّة ذهبية ناعمة + بلاطة نيلية بأيقونة ورقة إجابة */
+.pg .hx .nav a[href="test.html"]{position:relative;display:inline-flex;align-items:center;gap:8px;padding-inline:6px 14px;border-radius:10px;font-weight:700;color:var(--ink);background:linear-gradient(135deg,color-mix(in srgb,var(--amb) 42%,transparent),color-mix(in srgb,var(--amb) 16%,transparent));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,#E7AA53 90%,transparent),0 8px 16px -10px color-mix(in srgb,var(--den) 70%,transparent);transition:background-color .2s,color .2s,box-shadow .2s,transform .2s}
+.pg .hx .nav a[href="test.html"]::before{content:"";width:26px;height:26px;flex:none;border-radius:8px;background:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='24'%20rx='7'%20fill='%231A1856'/%3E%3Crect%20x='.6'%20y='.6'%20width='22.8'%20height='22.8'%20rx='6.4'%20fill='none'%20stroke='%23FFC83D'%20stroke-opacity='.4'%20stroke-width='1.2'/%3E%3Cg%20fill='none'%20stroke='%23FFC83D'%20stroke-width='1.6'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M8.6%205h6.8a1.9%201.9%200%20011.9%201.9v10.2a1.9%201.9%200%2001-1.9%201.9H8.6a1.9%201.9%200%2001-1.9-1.9V6.9A1.9%201.9%200%20018.6%205z'/%3E%3Cpath%20d='M9.6%209.2h.01M12%209.2h3.2M9.6%2012.2h.01M12%2012.2h3.2'/%3E%3Cpath%20d='M9.3%2015.6l1.4%201.4%202.6-2.8'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;transition:transform .25s}
+.pg .hx .nav a[href="test.html"]:hover,.pg .hx .nav a[href="test.html"].on{background:var(--amb);color:#1B1D46;box-shadow:inset 0 0 0 1.5px #E7AA53,0 10px 18px -10px color-mix(in srgb,var(--den) 80%,transparent)}
+.pg .hx .nav a[href="test.html"]:hover{transform:translateY(-1px)}
+.pg .hx .nav a[href="test.html"]:hover::before{transform:rotate(-8deg) scale(1.06)}
+@media(prefers-reduced-motion:reduce){.pg .hx .nav a[href="test.html"],.pg .hx .nav a[href="test.html"]::before{transition:none}.pg .hx .nav a[href="test.html"]:hover,.pg .hx .nav a[href="test.html"]:hover::before{transform:none}}
+
+/* ---------- القائمة الجانبية (الديسكتوب) ---------- */
+.pg .dsb-top{background:linear-gradient(135deg,#6A4DC9 0%,#A680EA 100%)}
+.pg .dsb-mk{width:46px;height:38px;border-radius:0;background:url(monalingo-mark.webp) center/contain no-repeat;filter:drop-shadow(0 2px 8px rgba(0,0,0,.35))}
+.pg .dsb-t span:last-child{font-family:var(--lat);letter-spacing:.06em;direction:ltr;text-align:start}
+.pg .dsb-t small{font-family:'Cairo',Tahoma,sans-serif;letter-spacing:0;direction:rtl}
+.pg .dsb-nav a[href="test.html"]{background:color-mix(in srgb,var(--amb) 24%,transparent)}
+.pg .dsb-nav a[aria-current=page]{background:var(--sky);color:var(--den);font-weight:800}
+
+/* ---------- الفوتر ---------- */
+.pg footer.sf{background:linear-gradient(180deg,#A680EA 0%,#31349A 46%,#2D2C7A 100%);color:#E7DCFB}
+html[data-theme=dark] .pg footer.sf{background:linear-gradient(180deg,#262B6B 0%,#0F1236 100%)}
+.pg footer.sf a:hover{color:#E7AA53}
+.pg footer.sf a:focus-visible{outline-color:#E7AA53}
+.pg footer.sf h4{color:#E7AA53}
+.pg footer.sf .sf-logo{color:#fff;font:800 17px/1.3 var(--lat);letter-spacing:.06em;direction:ltr}
+.pg footer.sf .sf-logo small{font:600 10px/1.5 var(--lat);letter-spacing:.16em;color:#D6C5F8}
+.pg footer.sf .sf-mk{width:54px;height:54px;border-radius:15px;background:#fff url(monalingo-mark.webp) center/84% no-repeat;box-shadow:0 10px 22px -10px rgba(0,0,0,.5)}
+.pg footer.sf .sf-brand p{color:#E7DCFB}
+.pg footer.sf .sf-card{background:rgba(255,255,255,.08);border-color:rgba(215,190,245,.22)}
+.pg footer.sf .sf-q a::before{background:#E7AA53}
+.pg footer.sf .sf-sup{border-top-color:rgba(215,190,245,.22)}
+.pg footer.sf .sf-ct li{border-color:rgba(231,170,83,.6)}
+.pg footer.sf .sf-cp{border-top-color:rgba(215,190,245,.22);color:#D6C5F8}
+@media(min-width:860px){.pg footer.sf .sf-logo{font-size:19px}}
+/* توقيع المطوّر: شريط ذهبي بنص نيلي */
+.dev-sig{--g1:#1B1D46;--g2:#1B1D46;background:#E7AA53;color:#1B1D46}
+.ds-code{border-color:rgba(27,29,70,.45);background:rgba(27,29,70,.1)}
+.ds-name svg{fill:#1B1D46}
+
+/* ---------- عنوان القسم وعدّاد الكورسات ---------- */
+.pg .sc-sec{padding:40px 0 96px}
+.pg .sc-bar{margin-bottom:24px}
+.pg .sc-bar h2{position:relative;padding-inline-start:18px;font-weight:900;color:var(--ink)}
+.pg .sc-bar h2::before{content:"";position:absolute;inset-inline-start:0;top:12%;bottom:12%;width:6px;border-radius:6px;background:linear-gradient(180deg,#A680EA,#E7AA53)}
+.pg .cnt[hidden]{display:none}
+.pg .cnt{gap:8px;background:var(--sky);color:var(--den);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--vio) 24%,transparent)}
+.pg .cnt::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amb)}
+.pg .nt{border-inline-start:4px solid var(--amb);background:var(--sky);color:var(--ink)}
+
+/* ---------- الحالات: فارغة / تعذّر التحميل / تحميل ---------- */
+.pg .st{border:1.5px dashed color-mix(in srgb,var(--vio) 40%,var(--bd));background:color-mix(in srgb,var(--sky) 70%,transparent);border-radius:28px}
+.pg .st .ic{background:var(--grad);color:#fff;box-shadow:0 16px 26px -14px rgba(var(--shd),.8)}
+.pg .btn.b1{background:linear-gradient(135deg,var(--btn) 55%,var(--btnh));box-shadow:0 12px 22px -14px color-mix(in srgb,var(--btn) 85%,#000),inset 0 1px 0 rgba(255,255,255,.18)}
+.pg .btn.b1:hover{background:linear-gradient(135deg,var(--btnh),var(--btn))}
+.pg .sk{border-radius:26px}
+
+
+/* =====================================================================================
+   course.html — هيرو الكورس + دروس الأكورديون + مشغّل الفيديو (كل الـ HTML يولّده course-lessons.js)
+   ===================================================================================== */
+
+/* ---------- الهيرو ---------- */
+.pg .ch{position:relative;isolation:isolate;overflow:hidden;padding:30px 0 70px;border-radius:0 0 44px 44px;color:#fff;background:radial-gradient(52% 72% at 100% 0%,rgba(187,162,229,.5),transparent 70%),radial-gradient(42% 62% at 0% 100%,rgba(231,170,83,.2),transparent 72%),linear-gradient(135deg,#242772 0%,#8483EA 52%,#A680EA 100%)}
+html[data-theme=dark] .pg .ch{background:radial-gradient(52% 72% at 100% 0%,rgba(166,128,234,.55),transparent 70%),radial-gradient(42% 62% at 0% 100%,rgba(231,170,83,.14),transparent 72%),linear-gradient(135deg,#0F1236 0%,#262B6B 55%,#8483EA 100%)}
+.pg .ch::before{content:"";display:block;position:absolute;z-index:-1;inset:auto auto -70px 46%;width:430px;height:353px;border:0;border-radius:0;background:url(monalingo-mark.webp) center/contain no-repeat;opacity:.09;filter:brightness(2.4) saturate(.6);pointer-events:none}
+.pg .ch::after{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(rgba(255,255,255,.2) 1.2px,transparent 1.6px) 0 0/26px 26px;-webkit-mask-image:radial-gradient(60% 90% at 100% 0%,#000,transparent 75%);mask-image:radial-gradient(60% 90% at 100% 0%,#000,transparent 75%);opacity:.55}
+.pg .ch .bc{display:flex;width:fit-content;max-width:100%;margin-bottom:26px;padding:6px 16px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(215,190,245,.28);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-size:13.5px}
+.pg .ch .bc,.pg .ch .bc a{color:#DFCFFF}
+.pg .ch .bc a:hover{color:#E7AA53;text-decoration:none}
+.pg .ch .bc span{color:#fff;font-weight:700;overflow-wrap:anywhere}
+.pg .ch-eb{background:#E7AA53;color:#1B1D46;font-weight:800;box-shadow:0 12px 22px -14px rgba(0,0,0,.6);transition:background .2s,transform .2s}
+.pg .ch-eb:hover{background:#F0C07A;transform:translateY(-1px)}
+.pg .ch h1{color:#fff;font-size:clamp(30px,3.8vw,48px);line-height:1.4}
+.pg .ch-hl{background:linear-gradient(transparent 84%,#E7AA53 84%)}
+.pg .ch-d{color:#E8DDFF}
+.pg .ch-more{color:#E7AA53}
+.pg .ch-s{background:rgba(255,255,255,.1);border-color:rgba(215,190,245,.3);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pg .ch-s small{color:#DCCCFA}
+.pg .ch-si{background:#E7AA53;color:#1B1D46}
+.pg .ch-s:last-child:not(.free) .ch-si{background:#D7BEF5;color:#1B1D46}
+.pg .ch-s.free .ch-si{background:linear-gradient(135deg,#F6D49C,#E7AA53);color:#1B1D46}
+.pg .ch-back{color:#fff;transition:color .2s}
+.pg .ch-back:hover{color:#E7AA53;text-decoration:none}
+.pg .ch-vis::before{background:linear-gradient(135deg,#E7AA53,#FFB020)}
+.pg .ch-vis .cv-cover{border-color:#fff;background:radial-gradient(60% 80% at 82% 0%,rgba(231,170,83,.34),transparent 66%),linear-gradient(135deg,#2A2D86 0%,#8F6FE0 55%,#A680EA 100%)}
+.pg .cv-cover::before{content:"Aa";position:absolute;z-index:-1;inset-inline-end:2%;bottom:-8%;direction:ltr;font:800 clamp(90px,14vw,180px)/1 var(--lat);letter-spacing:-.02em;color:rgba(255,255,255,.13)}
+.pg .cv-cover>.i{position:relative;width:84px;height:84px;padding:22px;border-radius:26px;opacity:1;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);box-shadow:0 18px 30px -14px rgba(21,24,64,.6),inset 0 1px 0 rgba(255,255,255,.25)}
+.pg .ch-i1{background:#E7AA53;color:#1B1D46}
+.pg .ch-i2{background:linear-gradient(135deg,#BBA2E5,#A680EA);color:#fff}
+.pg .ch-i3{background:#fff;color:#7A54D6;border-color:transparent}
+.pg .ch-i4{background:#1B1D46;color:#E7AA53;border:1px solid rgba(255,255,255,.22)}
+@media(max-width:820px){
+.pg .ch{border-radius:0 0 32px 32px;padding:22px 0 44px}
+.pg .ch::before{inset:auto auto -50px -80px;width:320px;height:262px}
+.pg .ch .bc{margin-bottom:20px}
+}
+
+/* ---------- محتوى الكورس: الدروس ---------- */
+.pg .ls-wrap .cnt{background:linear-gradient(135deg,#F6D49C,#E7AA53);color:#1B1D46;font-weight:800;box-shadow:none}
+.pg .ls-wrap .cnt::before{display:none}
+.pg .ls{border:1px solid var(--bd);border-radius:24px;background:var(--card);box-shadow:0 14px 28px -22px rgba(var(--shd),.6);transition:border-color .2s,box-shadow .2s}
+.pg .ls:hover{border-color:color-mix(in srgb,var(--vio) 38%,var(--bd))}
+.pg .ls[open]{border-color:color-mix(in srgb,var(--vio) 50%,var(--bd));box-shadow:0 24px 42px -26px rgba(var(--shd),.85)}
+.pg .ls-n{background:var(--grad);color:#fff;box-shadow:0 10px 18px -10px rgba(var(--shd),.85)}
+.pg .ls:has(.lx-q) .ls-n{background:linear-gradient(135deg,#F6D49C,#E7AA53);color:#1B1D46;box-shadow:0 10px 18px -10px rgba(160,100,0,.7)}
+.pg .ls summary::after{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--sky);color:var(--den);font:600 22px/1 'Cairo',Tahoma,sans-serif;transition:background .2s,color .2s}
+.pg .ls[open] summary::after{background:var(--vio);color:#fff}
+.pg .ls-t b{color:var(--ink)}
+.pg .lx-row{border-color:var(--bd);background:var(--sky)}
+.pg button.lx-row:hover:not(:disabled){border-color:var(--vio);box-shadow:0 14px 24px -18px rgba(var(--shd),.8)}
+.pg .lx-v .lx-ic{background:var(--grad);color:#fff;box-shadow:0 10px 16px -10px rgba(var(--shd),.8)}
+.pg .lx-q .lx-ic{background:linear-gradient(135deg,#F6D49C,#E7AA53);color:#1B1D46}
+.pg .lx-f .lx-ic{background:linear-gradient(135deg,#3FA6F2,#8483EA);color:#fff}
+.pg .lx-go{background:linear-gradient(135deg,var(--btn) 55%,var(--btnh));color:#fff;box-shadow:0 10px 18px -12px color-mix(in srgb,var(--btn) 85%,#000)}
+.pg a.lx-go:hover{background:linear-gradient(135deg,var(--btnh),var(--btn))}
+.pg .lx-q .lx-go{background:linear-gradient(135deg,#F6D49C,#E7AA53);color:#1B1D46;box-shadow:inset 0 0 0 1px #E7AA53,0 10px 16px -12px rgba(160,100,0,.8)}
+.pg .lx-q a.lx-go:hover{background:#F0C07A}
+.pg .lx-go.off{background:transparent;box-shadow:none;color:var(--mut)}
+@media(max-width:560px){.pg .ls{border-radius:20px}}
+
+/* ---------- مشغّل الفيديو (يُضاف إلى <body> خارج .pg، فالألوان صريحة) ---------- */
+@media not all and (orientation:landscape) and (max-height:540px){
+.lx-m{background:rgba(15,18,54,.9)}
+.lx-card{background:#1E225A;border-color:#383D8C;box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+}
+.lx-x:hover,.lx-cb:hover{background:#343A85}
+.lx-msg{background:#0F1236}
+.lx-spin{border-color:#383D8C;border-top-color:#E7AA53}
+.lx-retry{background:#E7AA53;color:#1B1D46}
+.lx-bar{background:#1E225A}
+.lx-rg,.lx-vol{accent-color:#E7AA53}
+.lx-time{color:#D3C4F2}
+.lx-sp{border-color:#8483EA;background:#252A66}
+</style>
+</head>
+<body>
+<div class="pg" dir="rtl"><input type="checkbox" id="thm" class="sr">
+<header class="hx"><div class="w hd">
+<a class="brand" href="/" aria-label="Monalingo — English Language Academy"><span class="brand__mk" aria-hidden="true"></span><span class="brand__name"><b>MONALINGO</b><small>ENGLISH LANGUAGE ACADEMY</small></span></a>
+<nav class="nav" aria-label="التنقل الرئيسي"><a href="/">الرئيسية</a><a href="/#courses" aria-current="page">الدورات</a><a href="lectures.html">المحاضرات</a><a href="test.html">الاختبارات</a><a href="/#about">عن الأكاديمية</a><a href="/#contact">تواصل معنا</a></nav>
+<div class="he"><label class="tg" dir="ltr" for="thm" title="تبديل الوضع الليلي / النهاري"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg><span class="sr">تبديل الوضع الليلي أو النهاري</span></label></div>
+<div class="hs" id="acct"><a class="dh-cta" href="auth.html#/register"><span class="dh-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0114 0M19 8v6M16 11h6"/></svg></span>إنشاء حساب</a><a class="hl" href="auth.html#/login"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>تسجيل الدخول</a><a class="hb" href="auth.html#/register"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0114 0M19 8v6M16 11h6"/></svg>أنشئ حسابك!</a></div>
+<button class="hm" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="acct"><span></span><span></span><span></span></button>
+<button class="dhm" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="dsb"><span></span><span></span><span></span></button>
+</div><div class="ac" aria-hidden="true"></div></header>
+
+<div class="dsb-ov" aria-hidden="true"></div>
+<aside class="dsb" id="dsb" aria-label="القائمة الرئيسية" aria-hidden="true">
+<div class="dsb-top"><span class="dsb-t"><span class="dsb-mk" aria-hidden="true"></span><span>MONALINGO<small>أكاديمية اللغة الإنجليزية</small></span></span><button class="dsb-x" type="button" aria-label="إغلاق القائمة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+<nav class="dsb-nav" aria-label="التنقل الرئيسي"><a href="/">الرئيسية<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a><a href="/#courses" aria-current="page">الدورات<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a><a href="lectures.html">المحاضرات<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a><a href="test.html">الاختبارات<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a><a href="/#about">عن الأكاديمية<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a><a href="/#contact">تواصل معنا<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a></nav>
+<div class="dsb-ft"><a class="dsb-login" href="auth.html#/login"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>تسجيل الدخول</span></a></div>
+</aside>
+<main id="app"><section class="sc-sec"><div class="w"><div class="cc-grid"><div class="sk"></div></div></div></section></main>
+<footer class="sf" id="contact"><div class="sf-in">
+<div class="sf-brand"><a class="sf-logo" href="/" aria-label="Monalingo — English Language Academy"><span class="sf-mk" aria-hidden="true"></span><span>MONALINGO<small>ENGLISH LANGUAGE ACADEMY</small></span></a><p>أكاديمية تعليمية متخصصة تجعل اللغة الإنجليزية أقرب وأسهل لكل طالب.</p></div>
+<div class="sf-card">
+<nav class="sf-qs" aria-label="روابط سريعة"><h4>روابط سريعة</h4><ul class="sf-q"><li><a href="/">الرئيسية</a></li><li><a href="/#courses">الدورات</a></li><li><a href="lectures.html">المحاضرات</a></li><li><a href="test.html">الاختبارات</a></li><li><a href="/#about">عن الأكاديمية</a></li></ul></nav>
+<nav class="sf-sup" aria-label="الدعم"><h4>الدعم</h4><ul class="sf-s"><li><a href="/">الأسئلة الشائعة</a></li><li><a href="/">الشروط والأحكام</a></li><li><a href="/">سياسة الخصوصية</a></li></ul></nav>
+</div>
+<div class="sf-ct"><h4>تواصل معنا</h4><ul><li><a class="sf-tel" href="tel:+201553399351" dir="ltr">+20 15 53399351</a></li><li><a class="sf-wa" href="https://wa.me/201553399351" target="_blank" rel="noopener noreferrer"><svg class="sf-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.3Z"/></svg>واتساب</a></li><li><a class="sf-fb" href="https://www.facebook.com/share/19ZMd2CQxd/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك" title="فيسبوك"><svg class="sf-ic" viewBox="0 0 24 24" aria-hidden="true"><defs><clipPath id="sfc"><circle cx="12" cy="12" r="12"/></clipPath></defs><circle cx="12" cy="12" r="12" fill="#1877F2"/><path clip-path="url(#sfc)" fill="#fff" d="M16.67 15.47l.53-3.47h-3.33V9.75c0-.95.47-1.88 1.96-1.88h1.51V4.92s-1.37-.23-2.68-.23c-2.74 0-4.53 1.66-4.53 4.67V12H6.08v3.47h3.05V24h3.74v-8.53z"/></svg></a></li></ul></div>
+<p class="sf-cp">© ٢٠٢٦ <bdi dir="ltr">Monalingo English Language Academy</bdi>. جميع الحقوق محفوظة.</p>
+</div></footer>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="platform-data.js"></script>
+<script src="grade-mapping.js"></script>
+<script src="student-session.js"></script>
+<script src="student-courses.js"></script>
+<script src="course-lessons.js"></script>
+<style id="act-style">
+.sc-lock-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--btn) 14%, var(--card)) 0%, color-mix(in srgb, var(--amb) 10%, var(--card)) 100%);
+  border: 1.5px solid color-mix(in srgb, var(--btn) 35%, transparent);
+  border-radius: 20px;
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  box-shadow: 0 12px 30px -12px rgba(122,84,214,.18);
+}
+.sc-lock-ic {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--btn);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex: none;
+  box-shadow: 0 6px 16px -4px color-mix(in srgb, var(--btn) 60%, transparent);
+}
+.sc-lock-ic svg { stroke: #fff; }
+.sc-lock-tx { flex: 1; }
+.sc-lock-tx h3 { font: 800 18px/1.3 'Cairo',Tahoma,sans-serif; margin: 0 0 4px; color: var(--ink); }
+.sc-lock-tx p { font: 500 14px/1.5 'Cairo',Tahoma,sans-serif; color: var(--mut); margin: 0; }
+.btn-act-now { flex: none; font-weight: 800; padding: 12px 24px; white-space: nowrap; }
+@media (max-width: 720px) {
+  .sc-lock-banner { flex-direction: column; text-align: center; gap: 14px; padding: 18px; }
+  .btn-act-now { width: 100%; }
+}
+.act-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(20,23,63,.65);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease, visibility .25s;
+}
+.act-modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.act-modal-card {
+  background: var(--card);
+  border-radius: 24px;
+  border: 1.5px solid var(--bd);
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.45);
+  overflow: hidden;
+  animation: actPop .3s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes actPop {
+  from { transform: scale(.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.act-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, #1B1D46 0%, #7A54D6 100%);
+  color: #fff;
+}
+.act-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 800 17px/1 'Cairo',sans-serif;
+}
+.act-modal-title svg { stroke: #fff; }
+.act-modal-close {
+  background: rgba(255,255,255,.15);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  transition: background .2s;
+}
+.act-modal-close:hover { background: #E7AA53; color: #1B1D46; }
+.act-modal-body { padding: 24px 22px; }
+.act-modal-desc { font: 600 14.5px/1.6 'Cairo',sans-serif; color: var(--ink); margin-bottom: 16px; }
+.act-modal-desc b { color: var(--btn); }
+.act-input-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 2px solid var(--bd);
+  background: var(--bg);
+  color: var(--ink);
+  font: 800 18px/1 monospace;
+  text-align: center;
+  letter-spacing: 2px;
+  direction: ltr;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.act-input-box:focus {
+  border-color: var(--btn);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--btn) 25%, transparent);
+}
+.act-modal-msg {
+  padding: 12px 14px;
+  border-radius: 12px;
+  font: 700 13.5px/1.5 'Cairo',sans-serif;
+  margin-top: 14px;
+}
+.act-modal-msg.err { background: #FDE8E8; color: #C81E1E; border: 1px solid #F8B4B4; }
+.act-modal-msg.succ { background: #DEF7EC; color: #03543F; border: 1px solid #BCF0DA; }
+.act-modal-msg.info { background: #E1EFFE; color: #1E429F; border: 1px solid #B4C6FC; }
+.act-modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.act-modal-actions button, .act-modal-actions a {
+  flex: 1;
+}
+.act-not-logged {
+  text-align: center;
+  padding: 10px 0;
+}
+.act-not-logged p {
+  font: 600 15px/1.6 'Cairo',sans-serif;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+</style>
+<script>
+(function(){
+  var C=window.AlaminCourses,E=C.esc,I=C.ICON,app=document.getElementById('app');
+  var id=new URLSearchParams(location.search).get('course');
+  function msg(t,s){app.innerHTML='<section class="sc-sec"><div class="w"><div class="st"><span class="ic">'+I.book+'</span><h3>'+t+'</h3><p>'+s+'</p><a class="btn b1" href="/#courses">العودة للصفوف الدراسية</a></div></div></section>';}
+  if(!id){msg('لم يتم تحديد الكورس','الرابط غير مكتمل. اختر الكورس من صفحة الصف الدراسي.');return;}
+  var sep='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+  var L=window.AlaminLessons,lesson=L.lesson;
+  function render(r){
+    var openIdx=L.openState();
+    if(!r.hasData){ /* لا نسخة محفوظة ولم يصل رد بعد */
+      if(r.state==='loading')return;
+      app.innerHTML='<section class="sc-sec"><div class="w"><div class="st"><span class="ic">'+I.book+'</span><h3>تعذّر تحميل الكورس الآن</h3><p>تأكد من اتصالك بالإنترنت. نواصل المحاولة تلقائيًا وسيظهر الكورس فور عودة الاتصال.</p><button type="button" class="btn b1" onclick="location.reload()">إعادة المحاولة</button></div></div></section>';
+      return;
+    }
+    var c=r.courses.filter(function(x){return String(x&&x.id)===String(id);})[0];
+    if(!c){
+      if(!r.fresh&&r.live)return; /* نسخة الجهاز قد تسبق كورسًا جديدًا: ننتظر تأكيد الخادم لحظات بدل عرض «غير موجود» */
+      msg('هذا الكورس غير موجود','ربما تم حذفه أو تغيير رابطه. تصفّح كورسات الصف الدراسي من جديد.');return;
+    }
+    window._currentCourse = c;
+    var studentUser = null;
+    try { studentUser = JSON.parse(localStorage.getItem('alamin_current')); } catch(e){}
+    var isUnlocked = C.isCourseUnlocked(c, studentUser);
+    var isLocked = !isUnlocked;
+
+    var g=C.gradeOfCourse(c),ls=C.lessonsOf(c),d=C.courseSecs(c),free=C.isFree(c),p=C.priceText(c);
+    document.title=(c.title||'الكورس')+' | Monalingo Academy';
+
+    var lockBanner = isLocked ? (
+      '<div class="sc-lock-banner">' +
+        '<div class="sc-lock-ic"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>' +
+        '<div class="sc-lock-tx">' +
+          '<h3>هذا الكورس محمي بكود تفعيل</h3>' +
+          '<p>يمكنك استعراض أسماء وفهرس دروس الكورس أدناه. للوصول إلى الفيديوهات والاختبارات والملازم، يرجى تفعيل الكورس بكود التفعيل الخاص بك.</p>' +
+        '</div>' +
+        '<button type="button" class="btn b1 btn-act-now" onclick="window.openCourseActivationModal()">تفعيل الكورس الآن 🔑</button>' +
+      '</div>'
+    ) : '';
+
+    app.innerHTML=L.hero(c,g,ls,d,free,p,sep)+
+      '<section class="sc-sec"><div class="w ls-wrap">' +
+      lockBanner +
+      '<div class="sc-bar"><h2>محتوى الكورس</h2><span class="cnt">'+C.ar(ls.length)+' درس</span></div>'+
+      (r.live?'':'<div class="nt">تعذّر الاتصال بالخادم، نعرض آخر نسخة محفوظة على جهازك.</div>')+
+      (ls.length?ls.map(function(l, i){ return lesson(l, i, isLocked); }).join(''):'<div class="st"><span class="ic">'+I.play+'</span><h3>لا يوجد محتوى لهذا الكورس حتى الآن</h3><p>سيتم إضافة الدروس قريبًا، تابعنا!</p></div>')+
+      '</div></section>';
+    L.afterRender(openIdx);
+  }
+  C.watch(render);
+
+  window.openCourseActivationModal = function() {
+    var modal = document.getElementById('courseActivationModal');
+    if (!modal) return;
+    var user = null;
+    try { user = JSON.parse(localStorage.getItem('alamin_current')); } catch(e){}
+    var notLoggedInWrap = document.getElementById('actNotLoggedInWrap');
+    var formWrap = document.getElementById('actFormWrap');
+    var courseTitleEl = document.getElementById('actCourseTitleSpan');
+    var msgEl = document.getElementById('actModalMsg');
+    if (msgEl) { msgEl.hidden = true; msgEl.textContent = ''; msgEl.className = 'act-modal-msg'; }
+    if (courseTitleEl && window._currentCourse) courseTitleEl.textContent = window._currentCourse.title || '';
+
+    if (!user || user.role !== 'student') {
+      if (notLoggedInWrap) notLoggedInWrap.style.display = 'block';
+      if (formWrap) formWrap.style.display = 'none';
+    } else {
+      if (notLoggedInWrap) notLoggedInWrap.style.display = 'none';
+      if (formWrap) formWrap.style.display = 'block';
+      var inp = document.getElementById('actCodeInput');
+      if (inp) { inp.value = ''; setTimeout(function(){ inp.focus(); }, 100); }
+    }
+    modal.classList.add('is-open');
+    modal.hidden = false;
+  };
+
+  window.closeCourseActivationModal = function() {
+    var modal = document.getElementById('courseActivationModal');
+    if (modal) {
+      modal.classList.remove('is-open');
+      modal.hidden = true;
+    }
+  };
+
+  window.submitCourseActivation = async function() {
+    var inp = document.getElementById('actCodeInput');
+    var msgEl = document.getElementById('actModalMsg');
+    var btn = document.getElementById('btnSubmitActivation');
+    var code = (inp && inp.value || '').trim().toUpperCase();
+    if (!code) {
+      if (msgEl) { msgEl.hidden = false; msgEl.className = 'act-modal-msg err'; msgEl.textContent = 'من فضلك أدخل كود التفعيل'; }
+      return;
+    }
+    var user = null;
+    try { user = JSON.parse(localStorage.getItem('alamin_current')); } catch(e){}
+    if (!user) {
+      if (msgEl) { msgEl.hidden = false; msgEl.className = 'act-modal-msg err'; msgEl.textContent = 'يرجى تسجيل الدخول أولاً'; }
+      return;
+    }
+    if (btn) { btn.disabled = true; btn.textContent = 'جاري التحقق...'; }
+    if (msgEl) { msgEl.hidden = false; msgEl.className = 'act-modal-msg info'; msgEl.textContent = '⏳ جاري التحقق من كود التفعيل وتأكيده...'; }
+
+    try {
+      var res = await C.redeemActivationCode(code, user);
+      if (!res.ok) {
+        if (msgEl) { msgEl.hidden = false; msgEl.className = 'act-modal-msg err'; msgEl.textContent = '❌ ' + (res.msg || 'كود غير صحيح'); }
+        if (btn) { btn.disabled = false; btn.textContent = 'تأكيد التفعيل'; }
+        return;
+      }
+      if (msgEl) {
+        msgEl.hidden = false;
+        msgEl.className = 'act-modal-msg succ';
+        msgEl.textContent = '🎉 تم تفعيل الكورس بنجاح على حسابك! جاري فتح المحتوى...';
+      }
+      setTimeout(function(){
+        location.reload();
+      }, 1200);
+    } catch(err) {
+      console.error(err);
+      if (msgEl) { msgEl.hidden = false; msgEl.className = 'act-modal-msg err'; msgEl.textContent = '❌ حدث خطأ غير متوقع. حاول مرة أخرى.'; }
+      if (btn) { btn.disabled = false; btn.textContent = 'تأكيد التفعيل'; }
+    }
+  };
+
+  document.addEventListener('click', function(e) {
+    var b = e.target.closest && e.target.closest('[data-locked]');
+    if (b) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.openCourseActivationModal();
+    }
+  });
+})();
+</script>
+<script>window.StudentSession&&window.StudentSession.resolve().then(window.StudentSession.paint).catch(function(){})</script>
+<script src="mobile-header.js" defer></script>
+<script>(function(){var b=document.querySelector(".dhm"),s=document.getElementById("dsb"),o=document.querySelector(".dsb-ov");if(!b||!s||!o)return;var x=s.querySelector(".dsb-x"),a=document.getElementById("acct"),l=s.querySelector(".dsb-login"),mq=window.matchMedia?window.matchMedia("(min-width:721px)"):{matches:true};function t(on){s.classList.toggle("is-open",on);o.classList.toggle("is-open",on);b.setAttribute("aria-expanded",on?"true":"false");s.setAttribute("aria-hidden",on?"false":"true");document.documentElement.classList.toggle("dsb-lock",on);if(on)x.focus();else if(s.contains(document.activeElement))b.focus()}b.addEventListener("click",function(){t(!s.classList.contains("is-open"))});x.addEventListener("click",function(){t(false)});o.addEventListener("click",function(){t(false)});s.addEventListener("click",function(e){if(e.target.closest&&e.target.closest("a"))t(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&s.classList.contains("is-open"))t(false)});if(mq.addEventListener)mq.addEventListener("change",function(m){if(!m.matches)t(false)});function sync(){var p=a&&a.querySelector(".hl"),r=a&&a.querySelector(".dh-cta");if(!p||!l)return;var n=l.querySelector("span");if(!r){l.setAttribute("href",p.getAttribute("href"));n.textContent=p.textContent.trim()}else{l.setAttribute("href","auth.html#/login");n.textContent="تسجيل الدخول"}}if(a&&window.MutationObserver)new MutationObserver(sync).observe(a,{childList:true});})();</script>
+<footer class="dev-sig" dir="ltr" role="contentinfo" aria-label="Developer signature">
+<p class="ds-in"><span class="ds-code" aria-hidden="true">&lt;/&gt;</span><span>Developed &amp; Designed by</span><a class="ds-name" href="https://wa.me/201001352771" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp"><b aria-hidden="true">&lt;</b><span>Eng. Ahmed Amr Abo_ Alhaj</span><b aria-hidden="true">/&gt;</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.3Z"/></svg></a></p>
+<!-- ACTIVATION MODAL -->
+<div id="courseActivationModal" class="act-modal-overlay" hidden>
+  <div class="act-modal-card" role="dialog" aria-modal="true" aria-labelledby="actModalTitleHeading">
+    <div class="act-modal-header">
+      <div class="act-modal-title" id="actModalTitleHeading">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+        <span>تفعيل الكورس</span>
+      </div>
+      <button type="button" class="act-modal-close" onclick="closeCourseActivationModal()" aria-label="إغلاق النافذة">&times;</button>
+    </div>
+    <div class="act-modal-body">
+      <!-- When user is NOT logged in -->
+      <div id="actNotLoggedInWrap" class="act-not-logged" style="display:none">
+        <p>يجب تسجيل الدخول بحسابك أولاً حتى يتم ربط الكورس وتفعيله بحسابك بشكل دائم.</p>
+        <div class="act-modal-actions">
+          <a href="auth.html#/login" class="btn b1">تسجيل الدخول</a>
+          <a href="auth.html#/register" class="btn b2">إنشاء حساب</a>
+        </div>
+      </div>
+
+      <!-- When user IS logged in -->
+      <div id="actFormWrap">
+        <p class="act-modal-desc">أدخل كود التفعيل الخاص بك لتفعيل كورس: <b id="actCourseTitleSpan"></b></p>
+        <input type="text" id="actCodeInput" class="act-input-box" placeholder="MONA-XXXX-XXXX" autocomplete="off" spellcheck="false" dir="ltr">
+        <div id="actModalMsg" class="act-modal-msg" hidden></div>
+        <div class="act-modal-actions">
+          <button type="button" id="btnSubmitActivation" class="btn b1" onclick="submitCourseActivation()">تأكيد التفعيل</button>
+          <button type="button" class="btn b2" onclick="closeCourseActivationModal()">إلغاء</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
